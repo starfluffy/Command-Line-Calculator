@@ -10,7 +10,7 @@ int getFirstNumber() {
 char getOperation() {
 	char opr;
 	printf("Enter the operation you would like to use: ");
-	scanf("%c", &opr);
+	scanf(" %c", &opr);
 	return opr;
 }
 
