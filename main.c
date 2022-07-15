@@ -21,7 +21,10 @@ int getSecondNumber() {
 	return number2;
 }
 
-int main(double firstNumber, char operation, double secondNumber) {
+int main() {
+	double firstNumber;
+	char operation;
+	double secondNumber;
 	double answer;
 
 	firstNumber = getFirstNumber();
