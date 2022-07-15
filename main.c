@@ -2,9 +2,9 @@
 
 int getFirstNumber() {
 	double number1;
+	int ask = 1;
 	printf("Enter the first number of your calculation: ");
 	scanf("%lf", &number1);
-	numErrorCheck(number1);
 	return number1;
 }
 
@@ -42,20 +42,6 @@ int calculation(double firstNumber, char operation, double secondNumber) {
 		return answer;
 	}
 }
-
-int numErrorCheck(num) {
-	int error
-	if (!isdigit(num)) {
-		printf("Please enter a number");
-		error = 1;
-		
-	} else {
-		error = 0
-	}
-	return error;
-}
-
-int 
 
 int main() {
 	double finalAnswer;
