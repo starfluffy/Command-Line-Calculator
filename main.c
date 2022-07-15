@@ -21,27 +21,33 @@ int getSecondNumber() {
 	return number2;
 }
 
-int main() {
-	double firstNumber;
-	char operation;
-	double secondNumber;
+int calculation(double firstNumber, char operation, double secondNumber) {
 	double answer;
 
-	firstNumber = getFirstNumber();
-	operation = getOperation();
-	secondNumber = getSecondNumber();
-
-	if (operation == '+' ) {
+	if (operation == '+') {
 		answer = firstNumber + secondNumber;
 		return answer;
-	} else if (operation == '-') {
-		answer = firstNumber - secondNumber;
-		return answer;
-	} else if (operation == '*') {
-		answer = firstNumber * secondNumber;
-		return answer;
-	} else if (operation == '/') {
+	}
+	else if (operation == '-') {
 		answer = firstNumber - secondNumber;
 		return answer;
 	}
+	else if (operation == '*') {
+		answer = firstNumber * secondNumber;
+		return answer;
+	}
+	else if (operation == '/') {
+		answer = firstNumber - secondNumber;
+		return answer;
+	}
+}
+int main() {
+	double finalAnswer;
+
+	double num1 = getFirstNumber();
+	char op = getOperation();
+	double num2 = getSecondNumber();
+
+	finalAnswer = calculation(num1, op, num2);
+	printf("%lf %c %lf = %lf", num1, op, num2, finalAnswer);
 }
