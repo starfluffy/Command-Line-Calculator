@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int getFirstNumber() {
+double getFirstNumber() {
 	double number1;
 	int ask = 1;
 	printf("Enter the first number of your calculation: ");
@@ -15,14 +15,14 @@ char getOperation() {
 	return opr;
 }
 
-int getSecondNumber() {
+double getSecondNumber() {
 	double number2;
 	printf("Enter the second number of your calculation: ");
 	scanf("%lf", &number2);
 	return number2;
 }
 
-int calculation(double firstNumber, char operation, double secondNumber) {
+double calculation(double firstNumber, char operation, double secondNumber) {
 	double answer;
 
 	if (operation == '+') {
