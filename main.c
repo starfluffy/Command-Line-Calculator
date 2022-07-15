@@ -21,12 +21,12 @@ int getSecondNumber() {
 	return number2;
 }
 
-int main(double firstNumber, double secondNumber) {
-	char operation;
+int main(double firstNumber, char operation, double secondNumber) {
 	double answer;
 
-	double firstNumber = getFirstNumber();
-	double secondNumber = getSecondNumber();
+	firstNumber = getFirstNumber();
+	operation = getOperation();
+	secondNumber = getSecondNumber();
 
 	if (operation == '+' ) {
 		answer = firstNumber + secondNumber;
