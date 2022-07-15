@@ -1,8 +1,27 @@
 #include <stdio.h>
 
-int getFirstNumber(int number1) {
-	int number1;
+int getFirstNumber() {
+	double number1;
 	printf("Enter the first number of your calculation: ");
-	scanf("%d", number1);
-	return number1
+	scanf("%lf", &number1);
+	return number1;
+}
+
+int getSecondNumber() {
+	double number2;
+	printf("Enter the second number of your calculation: ");
+	scanf("%lf", &number2);
+	return number2;
+}
+
+int main(double firstNumber, double secondNumber) {
+	char operation;
+	double answer;
+
+	double firstNumber = getFirstNumber();
+	double secondNumber = getSecondNumber();
+
+	if (operation == +) {
+		answer = 
+	}
 }
