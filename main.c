@@ -7,6 +7,13 @@ int getFirstNumber() {
 	return number1;
 }
 
+char getOperation() {
+	char opr;
+	printf("Enter the operation you would like to use: ");
+	scanf("%c", &opr);
+	return opr;
+}
+
 int getSecondNumber() {
 	double number2;
 	printf("Enter the second number of your calculation: ");
@@ -21,7 +28,17 @@ int main(double firstNumber, double secondNumber) {
 	double firstNumber = getFirstNumber();
 	double secondNumber = getSecondNumber();
 
-	if (operation == +) {
-		answer = 
+	if (operation == '+' ) {
+		answer = firstNumber + secondNumber;
+		return answer;
+	} else if (operation == '-') {
+		answer = firstNumber - secondNumber;
+		return answer;
+	} else if (operation == '*') {
+		answer = firstNumber * secondNumber;
+		return answer;
+	} else if (operation == '/') {
+		answer = firstNumber - secondNumber;
+		return answer;
 	}
 }
