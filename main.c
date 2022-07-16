@@ -10,8 +10,17 @@ double getFirstNumber() {
 
 char getOperation() {
 	char opr;
-	printf("Enter the operation you would like to use: ");
-	scanf(" %c", &opr);
+	int asking = 1;
+	while (asking == 1) {
+		printf("Enter the operation you would like to use: ");
+		scanf(" %c", &opr);
+		if (opr == '-' || opr == '+' || opr == '/' || opr == '*') {
+			asking = 0;
+		}
+		else {
+			printf("Please enter a valid operation\n");
+		}
+	}
 	return opr;
 }
 
