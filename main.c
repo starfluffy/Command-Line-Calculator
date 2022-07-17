@@ -2,8 +2,17 @@
 
 double getFirstNumber() {
 	double number1;
-	printf("Enter the first number of your calculation: ");
-	scanf("%lf", &number1);
+	int isQuestioning = 1;
+	while (isQuestioning == 1) {
+		printf("Enter the first number of your calculation: ");
+		scanf("%lf", &number1);
+		if (number1 / number1 != 1){
+			printf("Please enter a number\n");
+		}
+		else {
+			isQuestioning = 0;
+		}
+	}
 	return number1;
 }
 
@@ -54,7 +63,7 @@ double calculate(double firstNumber, char operation, double secondNumber) {
 		return answer;
 	}
 	else if (operation == '/') {
-		answer = firstNumber - secondNumber;
+		answer = firstNumber / secondNumber;
 		return answer;
 	} 
 	return -1;
@@ -64,11 +73,8 @@ int main() {
 	double finalAnswer;
 
 	double num1 = getFirstNumber();
-	printf("%lf\n", num1);
 	char op = getOperation();
-	printf("%c\n", op);
 	double num2 = getSecondNumber();
-	printf("%lf %c %lf\n", num1, op, num2);
 
 	finalAnswer = calculate(num1, op, num2);
 	printf("%lf %c %lf = %lf", num1, op, num2, finalAnswer);
