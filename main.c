@@ -2,8 +2,16 @@
 
 double getFirstNumber() {
 	double number1;
-	printf("Enter the first number of your calculation: ");
-	scanf("%lf", &number1);
+	int isQuestioning = 1;
+	while (isQuestioning == 1) {
+		printf("Enter the first number of your calculation: ");
+		if (scanf("%lf", &number1) != 1) {
+			printf("Please enter a number\n");
+		}
+		else {
+			isQuestioning = 0;
+		}
+	}
 	return number1;
 }
 
