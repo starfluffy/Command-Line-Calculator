@@ -2,17 +2,8 @@
 
 double getFirstNumber() {
 	double number1;
-	int isQuestioning = 1;
-	while (isQuestioning == 1) {
-		printf("Enter the first number of your calculation: ");
-		scanf("%lf", &number1);
-		if (number1 / number1 != 1){
-			printf("Please enter a number\n");
-		}
-		else {
-			isQuestioning = 0;
-		}
-	}
+	printf("Enter the first number of your calculation: ");
+	scanf("%lf", &number1);
 	return number1;
 }
 
@@ -34,8 +25,6 @@ char getOperation() {
 				printf("Please enter a valid operation\n");
 			}
 		}
-		
-		
 	}
 	return operationString[0];
 }
